@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,14 +16,16 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var resolveGetter = require( '@stdlib/array-base-resolve-getter' );
+import { Collection, AccessorArrayLike, ArrayLike } from '@stdlib/types/array';
 
-
-// MAIN //
+/**
+* Property key.
+*/
+type PropertyKey = string | number | symbol;
 
 /**
 * Zips one or more arrays to an array of objects.
@@ -33,9 +35,9 @@ var resolveGetter = require( '@stdlib/array-base-resolve-getter' );
 * -   The function assumes that the list of arrays to be zipped all have the same length.
 * -   The list of provided array labels should equal the number of arrays to be zipped.
 *
-* @param {Collection<Collection>} arrays - list of arrays to be zipped
-* @param {ArrayLikeObject<string>} labels - list of array labels
-* @returns {Array<Object>} output array
+* @param arrays - list of arrays to be zipped
+* @param labels - list of array labels
+* @returns output array
 *
 * @example
 * var x = [ 1, 2, 3 ];
@@ -46,45 +48,9 @@ var resolveGetter = require( '@stdlib/array-base-resolve-getter' );
 * var z = zip2objects( [ x, y ], labels );
 * // returns [ { 'x': 1, 'y': 'a' }, { 'x': 2, 'y': 'b' }, { 'x': 3, 'y': 'c' } ]
 */
-function zip2objects( arrays, labels ) {
-	var getters;
-	var keys;
-	var get;
-	var out;
-	var obj;
-	var M;
-	var N;
-	var i;
-	var j;
-
-	M = arrays.length;
-	if ( M < 1 ) {
-		return [];
-	}
-	N = arrays[ 0 ].length;
-	if ( N < 1 ) {
-		return [];
-	}
-	getters = [];
-
-	get = resolveGetter( labels );
-	keys = [];
-	for ( j = 0; j < M; j++ ) {
-		getters.push( resolveGetter( arrays[ j ] ) );
-		keys.push( get( labels, j ) );
-	}
-	out = [];
-	for ( i = 0; i < N; i++ ) {
-		obj = {};
-		for ( j = 0; j < M; j++ ) {
-			obj[ keys[ j ] ] = getters[ j ]( arrays[ j ], i );
-		}
-		out.push( obj );
-	}
-	return out;
-}
+declare function zip2objects<T = unknown, U extends PropertyKey = PropertyKey>( arrays: ArrayLike<Collection<T> | AccessorArrayLike<T>>, labels: Collection<U> | AccessorArrayLike<U> ): Array<Record<U, T>>;
 
 
 // EXPORTS //
 
-module.exports = zip2objects;
+export = zip2objects;
