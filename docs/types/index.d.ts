@@ -33,7 +33,7 @@ type PropertyKey = string | number | symbol;
 * ## Notes
 *
 * -   The function assumes that the list of arrays to be zipped all have the same length.
-* -   The list of provided array labels should equal the number of arrays to be zipped.
+* -   The number of provided array labels should equal the number of arrays to be zipped.
 *
 * @param arrays - list of arrays to be zipped
 * @param labels - list of array labels
