@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/array-base-zip2objects",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Zip one or more arrays to an array of objects.",
   "license": "Apache-2.0",
   "author": {
