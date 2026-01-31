@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import zip2objects from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@deno/mod.js';
+import zip2objects from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@v0.1.0-deno/mod.js';
 ```
 
 #### zip2objects( arrays, labels )
@@ -86,7 +86,7 @@ The function supports the following parameters:
 ```javascript
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
 import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@deno/mod.js';
-import zip2objects from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@deno/mod.js';
+import zip2objects from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@v0.1.0-deno/mod.js';
 
 var x = zeroTo( 10 );
 var y = discreteUniform( x.length, -100, 100 );
