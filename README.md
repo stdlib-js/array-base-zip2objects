@@ -44,7 +44,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-zip2objects = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@umd/browser.js' )
+zip2objects = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@v0.1.0-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -56,7 +56,7 @@ var zip2objects = require( 'path/to/vendor/umd/array-base-zip2objects/index.js' 
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@v0.1.0-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -113,7 +113,7 @@ The function supports the following parameters:
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@v0.1.0-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
