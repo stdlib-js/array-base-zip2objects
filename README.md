@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import zip2objects from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-base-zip2objects/tags). For example,
+
+```javascript
 import zip2objects from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@v0.1.1-deno/mod.js';
 ```
 
@@ -86,7 +91,7 @@ The function supports the following parameters:
 ```javascript
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
 import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@deno/mod.js';
-import zip2objects from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@v0.1.1-deno/mod.js';
+import zip2objects from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zip2objects@deno/mod.js';
 
 var x = zeroTo( 10 );
 var y = discreteUniform( x.length, -100, 100 );
